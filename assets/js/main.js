@@ -5,7 +5,7 @@ const Lmain = document.querySelector(".l-main")
 
 menuMobile.addEventListener("click", () => {
     navMenu.classList.toggle("show-menu");
-    Lmain.classList.add("blur")
+    // Lmain.classList.toggle("blur")
 })
 
 /*==================== REMOVE MENU MOBILE ====================*/
