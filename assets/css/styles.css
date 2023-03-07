@@ -1,0 +1,462 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/
+/*========== Colors ==========*/
+/*========== Font and typography ==========*/
+/*========== Font weight ==========*/
+/*========== Margenes ==========*/
+/*========== z index ==========*/
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*========== Variables Dark theme ==========*/
+.dark-theme {
+  background: #1d2521 !important;
+}
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3 {
+  color: #f1f3f2;
+}
+.dark-theme p {
+  color: #c7d1cc !important;
+}
+.dark-theme .show-menu,
+.dark-theme .l-header {
+  background-color: #1d2521 !important;
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: #707070;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  background-color: #fbfefd;
+  color: #707070;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== CLASS CSS ==========*/
+.section {
+  padding: 4rem 0 2rem;
+}
+.section-title, .section-subtitle {
+  text-align: center;
+}
+.section-title {
+  font-size: 1.5rem;
+  color: #393939;
+  margin-bottom: 1.5rem;
+}
+.section-subtitle {
+  display: block;
+  color: #069c54;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/*========== LAYOUT ==========*/
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fbfefd;
+}
+
+/* Show menu */
+/* Active menu */
+.active-link {
+  color: #069c54;
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background: rgba(6, 156, 84, 0.5);
+  border-radius: 0.4rem;
+  z-index: 10;
+  transition: 0.4s;
+  visibility: hidden;
+}
+.scrolltop:hover {
+  background-color: #048654;
+}
+.scrolltop__icon {
+  font-size: 1.8rem;
+  color: #fbfefd;
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
+.nav {
+  max-width: 1024px;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: #fbfefd;
+    transition: 0.4s;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: 10;
+    transform: translateY(-200%);
+    transition: all 0.7s ease-in-out;
+  }
+}
+.nav .show-menu {
+  transform: translateY(0);
+}
+.nav__item {
+  margin-bottom: 1rem;
+}
+.nav__link, .nav__logo, .nav__toggle {
+  color: #707070;
+  font-weight: 500;
+}
+.nav__logo:hover {
+  color: #069c54;
+}
+.nav__link {
+  transition: 0.3s;
+}
+.nav__link:hover {
+  color: #069c54;
+}
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.menu__container {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+.menu__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
+  padding: 0.75rem;
+}
+.menu__img {
+  width: 100px;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+.menu__name, .menu__preci {
+  font-weight: 600;
+  color: #393939;
+}
+.menu__name {
+  font-size: 0.938rem;
+}
+.menu__detail, .menu__preci {
+  font-size: 0.813rem;
+}
+.menu__detail {
+  margin-bottom: 0.5rem;
+}
+.menu__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  font-size: 1.25rem;
+  padding: 0.625rem 0.813rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+
+.about__data {
+  text-align: center;
+}
+.about__description {
+  margin-bottom: 1.5rem;
+}
+.about__img {
+  width: 280px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.app__data {
+  text-align: center;
+}
+.app__description {
+  margin-bottom: 2.5rem;
+}
+.app__stores {
+  margin-bottom: 2rem;
+}
+.app__store {
+  width: 120px;
+  margin: 0 0.5rem;
+}
+.app__img {
+  width: 230px;
+  justify-self: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #069c54;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #048654;
+}
+
+.home__container {
+  height: calc(100vh - 3rem);
+  align-content: center;
+}
+.home__title {
+  font-size: 2.25rem;
+  color: #069c54;
+  margin-bottom: 0.5rem;
+}
+.home__subtitle {
+  font-size: 1.5rem;
+  color: #393939;
+  margin-bottom: 2rem;
+}
+.home__img {
+  width: 300px;
+  justify-self: center;
+}
+
+.services__container {
+  row-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.services__content {
+  text-align: center;
+}
+.services__img {
+  width: 64px;
+  height: 64px;
+  fill: #069c54;
+  margin-bottom: 1rem;
+}
+.services__title {
+  font-size: 1rem;
+  color: #393939;
+  margin-bottom: 0.5rem;
+}
+.services__description {
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .home__container,
+  .about__container,
+  .app__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .about__data,
+  .about__initial,
+  .app__data,
+  .app__initial,
+  .contact__container,
+  .contact__initial {
+    text-align: initial;
+  }
+  .about__img,
+  .app__img {
+    width: 380px;
+    order: -1;
+  }
+  .contact__container {
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+  }
+  .contact__button {
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding-top: 8rem;
+  }
+  .nav {
+    height: 4.5rem;
+  }
+  .nav__list {
+    display: flex;
+  }
+  .nav__item {
+    margin-left: 2.5rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .change-theme {
+    position: initial;
+    margin-left: 1rem;
+  }
+  .home__container {
+    height: 100vh;
+    justify-items: center;
+  }
+  .services__container,
+  .menu__container {
+    margin-top: 3rem;
+  }
+  .menu__container {
+    grid-template-columns: repeat(3, 210px);
+    column-gap: 4rem;
+  }
+  .menu__content {
+    padding: 1.5rem;
+  }
+  .menu__img {
+    width: 130px;
+  }
+  .app__store {
+    margin: 0 0.5rem 0 0;
+  }
+}
+@media screen and (min-width: 960px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home__img {
+    width: 500px;
+  }
+  .about__container,
+  .app__container {
+    column-gap: 7rem;
+  }
+}
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+  .home__container {
+    height: 640px;
+  }
+}
+.footer__container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+}
+.footer__logo {
+  font-size: 1rem;
+  color: #069c54;
+  font-weight: 600;
+}
+.footer__description {
+  display: block;
+  font-size: 0.813rem;
+  margin: 0.25rem 0 1.5rem;
+}
+.footer__social {
+  font-size: 1.5rem;
+  color: #393939;
+  margin-right: 1rem;
+}
+.footer__title {
+  font-size: 1.25rem;
+  color: #393939;
+  margin-bottom: 1rem;
+}
+.footer__link {
+  display: inline-block;
+  color: #707070;
+  margin-bottom: 0.5rem;
+}
+.footer__link:hover {
+  color: #069c54;
+}
+.footer__copy {
+  text-align: center;
+  font-size: 0.813rem;
+  color: #a6a6a6;
+  margin-top: 3.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
