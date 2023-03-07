@@ -106,8 +106,14 @@
 }
 
 /* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-  .home__container {
-    height: 640px;
-  }
-}
+// @media screen and (max-height: 780px) {
+//   .home__container {
+//     height: 400px;
+//   }
+// }
+
+// @media screen and (min-height: 1024px) {
+//   .home__container {
+//     height: 650px;
+//   }
+// }

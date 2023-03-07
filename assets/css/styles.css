@@ -155,6 +155,17 @@ img {
   bottom: 1.5rem;
 }
 
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 92, 85, 0.5);
+}
+
 .nav {
   max-width: 1024px;
   height: 3rem;
@@ -415,11 +426,6 @@ img {
   }
 }
 /* For tall screens on mobiles y desktop*/
-@media screen and (min-height: 721px) {
-  .home__container {
-    height: 640px;
-  }
-}
 .footer__container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;

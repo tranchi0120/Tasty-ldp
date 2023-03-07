@@ -1,9 +1,11 @@
 /*==================== SHOW MENU ====================*/
 const menuMobile = document.querySelector(".bx-menu");
 const navMenu = document.querySelector(".nav__menu");
+const Lmain = document.querySelector(".l-main")
 
 menuMobile.addEventListener("click", () => {
     navMenu.classList.toggle("show-menu");
+    Lmain.classList.add("blur")
 })
 
 /*==================== REMOVE MENU MOBILE ====================*/
@@ -11,8 +13,8 @@ const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
     const navMenu = document.getElementById("nav-menu");
-    // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove("show-menu");
+    Lmain.classList.remove("blur")
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
@@ -21,7 +23,6 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
     const nav = document.getElementById("header");
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
     if (this.scrollY >= 200) nav.classList.add("scroll-header");
     else nav.classList.remove("scroll-header");
 }
